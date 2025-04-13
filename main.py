@@ -1,6 +1,6 @@
 import streamlit as st
 st.title("Streamlit calculator 2.0📱")
-
+st.header("Corvit")
 # --- Step 1: Initialize session state ---
 if 'expression' not in st.session_state:
     st.session_state.expression = ""
