@@ -1,6 +1,7 @@
 import streamlit as st
-st.title("Streamlit calculator 2.0📱")
 
+st.title("Streamlit calculator 2.0📱")
+st.text("By Anas")
 if 'expression' not in st.session_state:
     st.session_state.expression = ""
 def warning():
@@ -13,27 +14,13 @@ def clear():
 
 def evaluate():
     try:
-        st.session_state.expression = str(eval(st.session_state.expression))
+        result = eval(st.session_state.expression)
+        st.session_state.expression = str(round(result, 2))
     except:
         warning()
         st.session_state.expression = " "
 
-st.markdown("""
-    <style>
-    .calc-button {
-        background-color: #F1F1F1;
-        color: black;
-        font-size: 20px;
-        padding: 20px;
-        border-radius: 10px;
-        width: 100%;
-        border: none;
-    }
-    .calc-button:hover {
-        background-color: #ddd;
-    }
-    </style>
-""", unsafe_allow_html=True)
+
 col1 = st.columns(4)
 with col1[0]:
     if st.button("7"):
