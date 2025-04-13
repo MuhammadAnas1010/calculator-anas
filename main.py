@@ -69,8 +69,8 @@ with col4[0]:
     if st.button("0"):
         add("0")
 with col4[1]:
-    if st.button("C"):
-        clear()
+    if st.button("."):
+        add('.')
 with col4[2]:
     if st.button("🟰"):
         evaluate()
@@ -78,8 +78,8 @@ with col4[3]:
     if st.button("➕"):
         add("+")
 
-if(st.button('.')):
-    add(".")
+if(st.button('C')):
+    clear()
 input_val = st.text_input("Calculator Input", key="expression")
 
 
