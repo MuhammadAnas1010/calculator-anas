@@ -78,7 +78,8 @@ with col4[3]:
     if st.button("➕"):
         add("+")
 
-
+if(st.button('.')):
+    add(".")
 input_val = st.text_input("Calculator Input", key="expression")
 
 
