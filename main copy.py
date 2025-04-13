@@ -7,6 +7,7 @@ st.title('Welcome to Basic Numerical Calculator(Anas))')
 # TAKE WEIGHT INPUT in kgs
 num_1 = st.number_input("Enter 1st Number: ")
 num_2 = st.number_input("Enter 2st Number: ")
+print('Abc')
 
 # TAKE HEIGHT INPUT
 # radio button to choose height format
