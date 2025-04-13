@@ -14,7 +14,8 @@ def evaluate():
     try:
         st.session_state.expression = str(eval(st.session_state.expression))
     except:
-        st.session_state.expression = "Seems like you don't know basic math😒"
+        st.warning('Seems like you don\'t know basic math😒')
+        st.session_state.expression = " "
 
 
 col1 = st.columns(4)
