@@ -4,39 +4,35 @@ st.title("Streamlit calculator 2.0📱")
 # --- Step 1: Initialize session state ---
 if 'expression' not in st.session_state:
     st.session_state.expression = ""
-#if 'update_counter' not in st.session_state:
-    #st.session_state.update_counter = 0
 
 # --- Step 2: Define action functions ---
 def press(val):
     st.session_state.expression += str(val)
-   # st.session_state.update_counter += 1  # update counter to trigger re-render
 
 def clear():
     st.session_state.expression = ""
-   # st.session_state.update_counter += 1
 
 def evaluate():
     try:
         st.session_state.expression = str(eval(st.session_state.expression))
     except:
         st.session_state.expression = "Error"
-    #st.session_state.update_counter += 1
 
 # --- Step 3: Create the calculator buttons ---
 # (These buttons update the session state)
 # Row 1: 7, 8, 9, /
-col1, col2, col3, col4 = st.columns(4)
-with col1:
+col11=[]
+col11 = st.columns(4)
+with col11[0]:
     if st.button("7"):
         press("7")
-with col2:
+with col11[1]:
     if st.button("8"):
         press("8")
-with col3:
+with col11[2]:
     if st.button("9"):
         press("9")
-with col4:
+with col11[3]:
     if st.button("➗"):
         press("/")
 
