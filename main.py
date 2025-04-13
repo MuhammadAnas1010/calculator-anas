@@ -14,7 +14,7 @@ def evaluate():
     try:
         st.session_state.expression = str(eval(st.session_state.expression))
     except:
-        st.warning('Seems like you don\'t know basic math😒')
+        warning()
         st.session_state.expression = " "
 
 
@@ -83,5 +83,7 @@ input_val = st.text_input("Calculator Input", key="expression")
 
 if input_val != st.session_state.expression:
     st.session_state.expression = input_val
+def warning():
+    st.warning('Seems like you don\'t know basic math😒')
 
 st.write("Current Entry by user:", st.session_state.expression)
