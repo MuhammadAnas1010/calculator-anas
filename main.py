@@ -22,62 +22,62 @@ def evaluate():
 # (These buttons update the session state)
 # Row 1: 7, 8, 9, /
 #col11=[]
-col11 = st.columns(4)
-with col11[0]:
+col1 = st.columns(4)
+with col1[0]:
     if st.button("7"):
         press("7")
-with col11[1]:
+with col1[1]:
     if st.button("8"):
         press("8")
-with col11[2]:
+with col1[2]:
     if st.button("9"):
         press("9")
-with col11[3]:
+with col1[3]:
     if st.button("➗"):
         press("/")
 
 # Row 2: 4, 5, 6, *
-col5, col6, col7, col8 = st.columns(4)
-with col5:
+col2= st.columns(4)
+with col2[0]:
     if st.button("4"):
         press("4")
-with col6:
+with col2[1]:
     if st.button("5"):
         press("5")
-with col7:
+with col2[2]:
     if st.button("6"):
         press("6")
-with col8:
+with col2[3]:
     if st.button("✖️"):
         press("*")
 
 # Row 3: 1, 2, 3, -
-col9, col10, col11, col12 = st.columns(4)
-with col9:
+col3= st.columns(4)
+with col3[0]:
     if st.button("1"):
         press("1")
-with col10:
+with col3[1]:
     if st.button("2"):
         press("2")
-with col11:
+with col3[2]:
     if st.button("3"):
         press("3")
-with col12:
+with col3[3]:
     if st.button("➖"):
         press("-")
 
 # Row 4: 0, C, =, +
-col13, col14, col15, col16 = st.columns(4)
-with col13:
+col4 = st.columns(4)
+with col4[0]:
     if st.button("0"):
         press("0")
-with col14:
+with col4[1]:
     if st.button("C"):
         clear()
-with col15:
+with col4[2]:
     if st.button("🟰"):
         evaluate()
-with col16:
+with col4[3]:
     if st.button("➕"):
         press("+")
 
