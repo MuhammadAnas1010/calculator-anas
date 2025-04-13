@@ -3,7 +3,8 @@ st.title("Streamlit calculator 2.0📱")
 
 if 'expression' not in st.session_state:
     st.session_state.expression = ""
-
+def warning():
+    st.warning('Seems like you don\'t know basic math😒')
 def add(val):
     st.session_state.expression += str(val)
 
@@ -83,7 +84,6 @@ input_val = st.text_input("Calculator Input", key="expression")
 
 if input_val != st.session_state.expression:
     st.session_state.expression = input_val
-def warning():
-    st.warning('Seems like you don\'t know basic math😒')
+
 
 st.write("Current Entry by user:", st.session_state.expression)
