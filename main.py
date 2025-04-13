@@ -21,7 +21,7 @@ def evaluate():
 # --- Step 3: Create the calculator buttons ---
 # (These buttons update the session state)
 # Row 1: 7, 8, 9, /
-col11=[]
+#col11=[]
 col11 = st.columns(4)
 with col11[0]:
     if st.button("7"):
