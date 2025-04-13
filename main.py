@@ -18,7 +18,22 @@ def evaluate():
         warning()
         st.session_state.expression = " "
 
-
+st.markdown("""
+    <style>
+    .calc-button {
+        background-color: #F1F1F1;
+        color: black;
+        font-size: 20px;
+        padding: 20px;
+        border-radius: 10px;
+        width: 100%;
+        border: none;
+    }
+    .calc-button:hover {
+        background-color: #ddd;
+    }
+    </style>
+""", unsafe_allow_html=True)
 col1 = st.columns(4)
 with col1[0]:
     if st.button("7"):
