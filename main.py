@@ -131,4 +131,4 @@ if st.session_state.error >= 1:
     time.sleep(1.5)
     msg.toast("Bro doesn't even know basic maths", icon="😒")
     st.session_state.error = 0
-    
+
